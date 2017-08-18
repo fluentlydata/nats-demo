@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  pub:
+    build: pub/
+    ports:
+      - 49160:8080
+    links:
+      - gnats
+  sub:
+    build: sub/
+    ports:
+      - 49161:8080
+    links:
+      - gnats
+  gnats:
+    image: apcera/gnatsd
+    ports: 
+      - 8222:8222
+

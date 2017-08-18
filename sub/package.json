@@ -1,0 +1,14 @@
+{
+  "name": "stan_pub",
+  "version": "1.0.0",
+  "description": "",
+  "author": "patrick.buchter@protonmail.ch",
+  "main": "stan-sub.js",
+  "scripts": {
+    "start": "node stan-sub.js -s nats://gnats:4222 'subject'"
+  },
+  "dependencies": {
+    "node-nats-streaming": "0.0.26"
+  }
+}
+
